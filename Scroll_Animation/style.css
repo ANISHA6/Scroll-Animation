@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden;
+
+}
+h1{
+    margin: 10px;
+}
+.content{
+    background-color:slateblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 400px;
+    margin: 10px;
+    color: wheat;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    border-radius: 5%;
+    transform: translateX(400%);
+    transition:transform 0.4s ease;
+
+}
+/* push all even no. of cards in left side */
+.content:nth-of-type(even){
+ transform: translateX(-400%);
+}
+/* Now add the class dianamically as soon as we scroll down */
+.content.show{
+    transform: translateX(0);
+}
+
+.content h2{
+    font-size: 45px;
+}
